@@ -108,12 +108,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo {
-  font-size: 32px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 1px;
+  background: #17495d;
+  border-radius: 40px;
 }
 
 #header .logo a {
@@ -125,7 +121,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 /* Search Bar */
@@ -571,6 +568,11 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
+#services{
+  margin-left: 170px;
+  
+}
 .services .icon-box-service {
   text-align: center;
   border: 1px solid #ebebeb;
@@ -1091,6 +1093,12 @@ section {
   padding: 0 0 30px 0;
   color: var(--white-color);
   font-size: 14px;
+}
+
+#footer .logo img {
+  width: 100px;
+  height: auto;
+ top: 0%;
 }
 
 #footer .footer-top {
