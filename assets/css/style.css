@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 :root {
   --primary-color: #17495d;
-  --secondary-color: #fbe588;
+  --secondary-color: #e8c760;
   --white-color: #ffffff;
   --black-color: #000000;
 }
@@ -26,6 +26,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -108,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo {
-  background: #17495d;
+  background: black;
   border-radius: 40px;
 }
 
@@ -1096,9 +1097,14 @@ section {
 }
 
 #footer .logo img {
-  width: 100px;
-  height: auto;
- top: 0%;
+  width: 100px;  /* Ajuste conforme necessário */
+  height: 100px; /* Deve ser igual à largura para manter o círculo */
+  border-radius: 50%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço corretamente */
+  border: 2px solid black; /* Opcional: adiciona uma borda */
+  top: 0%;
+  background: black;
+  
 }
 
 #footer .footer-top {
