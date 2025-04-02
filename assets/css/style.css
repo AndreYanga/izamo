@@ -583,6 +583,7 @@ section {
   height: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  width: 80%;
 }
 
 .services .icon-box-service .icon {
@@ -612,6 +613,16 @@ section {
 .services .icon-box-service h4 a {
   color: var(--primary-color);
   transition: ease-in-out 0.3s;
+}
+
+.services .icon-box-service .btn-primary {
+  background-color: #e8c760 ;
+  border-color: #17495d; 
+}
+
+.services .icon-box-service .btn-primary:hover {
+  background-color: black;
+  border-color: black ;
 }
 
 .services .icon-box-service p {
