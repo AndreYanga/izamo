@@ -40,27 +40,23 @@
       </div>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Página Inicial</a></li>
-          <li><a class="nav-link scrollto" href="#about">Sobre Nós</a></li>
-          <li class="dropdown"><a href="#services"><span>Catálogo de Serviços</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#accommodation">Serviços de Alojamento</a></li>
-              <li><a href="#tourism">Serviços de Turismo</a></li>
-              <li><a href="#transport">Serviços de Transporte</a></li>
-              <li><a href="#documentation">Assessoria Documental</a></li>
+          <li><a class="nav-link scrollto active" href="#hero" data-i18n="nav.home">Página Inicial</a></li>
+          <li><a class="nav-link scrollto" href="#about" data-i18n="nav.about">Sobre Nós</a></li>
+          <li><a href="#services" data-i18n="nav.services">Catálogo de Serviços</a></li>
+          <li><a class="nav-link scrollto" href="#contact" data-i18n="nav.contact">Contacto</a></li>
+          
+          <li class="dropdown language-switcher">
+            <a href="#" class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-translate"></i> <span id="current-lang-label">PT</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#" data-lang="pt">Português</a></li>
+              <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#know-more">Saiba Mais</a></li>
-          <li><a class="nav-link scrollto" href="#events">Eventos</a></li>
-          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
-      <div class="search-bar">
-        <input type="text" placeholder="Pesquisar...">
-        <button type="submit"><i class="bi bi-search"></i></button>
-      </div>
       
       <div class="country-flags">
         <a href="#"><img src="assets/img/south-africa-flag.jpg" alt="África do Sul"></a>
@@ -75,35 +71,14 @@
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center">
         <div class="col-xl-8 col-lg-10 text-center">
-          <h1>Sua Porta de Entrada para a África do Sul!</h1>
-          <h2>A Izamo é a solução completa para quem deseja viajar, estudar, morar ou explorar a África do Sul</h2>
+          <h1 data-i18n="hero.title">Explore as Maravilhas de Cape Town com Izamo</h1>
+          <h2 data-i18n="hero.subtitle">Descubra a beleza e cultura da África do Sul com nossos passeios exclusivos</h2>
         </div>
       </div>
 
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-3 col-md-6">
-          <div class="icon-box">
-            <i class="ri-home-4-line"></i>
-            <h3><a href="#accommodation">Acomodação</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-          <div class="icon-box">
-            <i class="ri-plane-line"></i>
-            <h3><a href="#tourism">Turismo</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-          <div class="icon-box">
-            <i class="ri-car-line"></i>
-            <h3><a href="#transport">Transporte</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-          <div class="icon-box">
-            <i class="ri-file-text-line"></i>
-            <h3><a href="#documentation">Documentação</a></h3>
-          </div>
+      <div class="row justify-content-center mt-4" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-lg-6 text-center">
+          <a href="#contact" class="btn btn-primary btn-lg hero-btn" data-i18n="hero.cta">Reserve seu Passeio</a>
         </div>
       </div>
     </div>
@@ -127,8 +102,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Sobre Nós</h2>
-          <p>Conheça a Izamo</p>
+          <h2 data-i18n="about.title">Sobre Nós</h2>
+          <p data-i18n="about.subtitle">Conheça a Izamo</p>
         </div>
 
         <div class="row">
@@ -136,17 +111,17 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="Time Izamo">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-            <h3>Sua jornada para a África do Sul começa aqui</h3>
-            <p class="fst-italic">
+            <h3 data-i18n="about.heading">Sua jornada para a África do Sul começa aqui</h3>
+            <p class="fst-italic" data-i18n="about.description">
               Nosso objetivo é tornar sua experiência na África do Sul mais fácil e segura, oferecendo acompanhamento especializado em acomodação, turismo, transporte e documentação.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Seja para uma viagem de lazer, estudos ou uma nova oportunidade de vida</li>
-              <li><i class="ri-check-double-line"></i> Estamos aqui para ajudar você a realizar seu sonho</li>
-              <li><i class="ri-check-double-line"></i> Serviços personalizados para cada necessidade</li>
-              <li><i class="ri-check-double-line"></i> Rede de parceiros confiáveis em toda a África do Sul</li>
+              <li><i class="ri-check-double-line"></i> <span data-i18n="about.bullet1">Seja para uma viagem de lazer, estudos ou uma nova oportunidade de vida</span></li>
+              <li><i class="ri-check-double-line"></i> <span data-i18n="about.bullet2">Estamos aqui para ajudar você a realizar seu sonho</span></li>
+              <li><i class="ri-check-double-line"></i> <span data-i18n="about.bullet3">Serviços personalizados para cada necessidade</span></li>
+              <li><i class="ri-check-double-line"></i> <span data-i18n="about.bullet4">Rede de parceiros confiáveis em toda a África do Sul</span></li>
             </ul>
-            <p>
+            <p data-i18n="about.final">
               Com anos de experiência no mercado, a Izamo se consolidou como a melhor opção para quem busca estabelecer-se na África do Sul com tranquilidade e segurança.
             </p>
           </div>
@@ -163,23 +138,23 @@
           <div class="image col-lg-6" style='background-image: url("assets/img/features.jpg");' data-aos="fade-right"></div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
             <div class="section-title">
-              <h2>Por que escolher a Izamo?</h2>
+              <h2 data-i18n="features.title">Por que escolher a Izamo?</h2>
             </div>
             
             <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
               <i class="bx bx-shield"></i>
-              <h4>Experiência e Confiabilidade</h4>
-              <p>Anos de atuação ajudando pessoas a se estabelecerem na África do Sul</p>
+              <h4 data-i18n="features.experience.title">Experiência e Confiabilidade</h4>
+              <p data-i18n="features.experience.desc">Anos de atuação ajudando pessoas a se estabelecerem na África do Sul</p>
             </div>
             <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
               <i class="bx bx-user-voice"></i>
-              <h4>Atendimento Personalizado</h4>
-              <p>Cada cliente é único e merece uma solução sob medida</p>
+              <h4 data-i18n="features.personal.title">Atendimento Personalizado</h4>
+              <p data-i18n="features.personal.desc">Cada cliente é único e merece uma solução sob medida</p>
             </div>
             <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
               <i class="bx bx-group"></i>
-              <h4>Rede de Parceiros</h4>
-              <p>Trabalhamos com as melhores instituições e fornecedores para garantir qualidade e segurança</p>
+              <h4 data-i18n="features.partners.title">Rede de Parceiros</h4>
+              <p data-i18n="features.partners.desc">Trabalhamos com as melhores instituições e fornecedores para garantir qualidade e segurança</p>
             </div>
           </div>
         </div>
@@ -192,69 +167,108 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Serviços</h2>
-          <p>Nossos Serviços</p>
+          <h2 data-i18n="services.title">Nossos Passeios</h2>
+          <p data-i18n="services.subtitle">Descubra as Maravilhas de Cape Town</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <!-- CITY TOUR -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box icon-box-service">
-              <div class="icon"><i class="ri-home-4-line"></i></div>
-              <h4><a href="">Acomodação Personalizada</a></h4>
+              <div class="icon"><i class="ri-building-line"></i></div>
+              <h4><a href="" data-i18n="services.citytour.title">CITY TOUR</a></h4>
               <p>
-                 Locação de casas e apartamentos mobiliados ou não<br>
-                Hospedagem para turistas, estudantes e profissionais<br>
-                Residências próximas a universidades e áreas estratégicas<br>
-                Consultoria para escolha do melhor bairro
+                <span data-i18n="services.citytour.duration">Half Day (7am – 1pm)</span><br>
+                <span data-i18n="services.citytour.price">Desde R 3,000</span><br>
+                <span data-i18n="services.citytour.highlight">Destaque: Table Mountain</span>
               </p>
-              <a href="#accommodation" class="btn btn-primary mt-3">Ver Catálogo</a>
+              <a href="#citytour" class="btn btn-primary mt-3" data-i18n="services.citytour.btn">Ver Detalhes</a>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <!-- CAPE PENINSULA TOUR -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box icon-box-service">
-              <div class="icon"><i class="ri-plane-line"></i></div>
-              <h4><a href="">Turismo e Viagens</a></h4>
+              <div class="icon"><i class="ri-map-pin-line"></i></div>
+              <h4><a href="" data-i18n="services.peninsula.title">CAPE PENINSULA TOUR</a></h4>
               <p>
-                 Passeios guiados em Joanesburgo, Pretória, Durban e Cidade do Cabo<br>
-                 Excursões para safáris, montanhas e praias paradisíacas<br>
-                 Transporte confortável e seguro<br>
-                 Serviços de tradução e guias turísticos
+                <span data-i18n="services.peninsula.duration">Full Day (7am – 6pm)</span><br>
+                <span data-i18n="services.peninsula.price">Desde R 5,000</span><br>
+                <span data-i18n="services.peninsula.highlight">Destaque: Cape of Good Hope & Penguins (Boulders Beach)</span>
               </p>
-              <a href="#tourism" class="btn btn-primary mt-3">Ver Catálogo</a>
+              <a href="#peninsula" class="btn btn-primary mt-3" data-i18n="services.peninsula.btn">Ver Detalhes</a>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+          <!-- WINERY TOUR -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box icon-box-service">
-              <div class="icon"><i class="ri-car-line"></i></div>
-              <h4><a href="">Transporte Privado</a></h4>
+              <div class="icon"><i class="ri-cup-line"></i></div>
+              <h4><a href="" data-i18n="services.winery.title">WINERY TOUR</a></h4>
               <p>
-                 Transfer do aeroporto para hotéis ou residências<br>
-                 Transporte privado para passeios e eventos<br>
-                 Serviço de motorista particular<br>
-                Veículos modernos e confortáveis<br>
-                Oferecemos transporte em Angola e África do Sul
+                <span data-i18n="services.winery.duration">Full Day (8am – 5pm)</span><br>
+                <span data-i18n="services.winery.price">Desde R 5,000</span><br>
+                <span data-i18n="services.winery.highlight">Destaque: Stellenbosch & Franschhoek</span>
               </p>
-              <a href="#transport" class="btn btn-primary mt-3">Ver Catálogo</a>
+              <a href="#winery" class="btn btn-primary mt-3" data-i18n="services.winery.btn">Ver Detalhes</a>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="400">
+          <!-- SAFARI AQUILA -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box icon-box-service">
-              <div class="icon"><i class="ri-file-text-line"></i></div>
-              <h4><a href="">Assessoria em Documentação</a></h4>
+              <div class="icon"><i class="ri-lion-line"></i></div>
+              <h4><a href="" data-i18n="services.safari.title">SAFARI AQUILA</a></h4>
               <p>
-                 Vistos para estudo, turismo e residência<br>
-                 Apoio na legalização de documentos<br>
-                 Tradução de documentos oficiais<br>
-                 Suporte para matrículas em escolas e universidades<br>
-                 Garanta seu futuro sem dores de cabeça
+                <span data-i18n="services.safari.duration">Full Day (5am – 6pm)</span><br>
+                <span data-i18n="services.safari.price">Preço sob consulta (por km)</span><br>
+                <span data-i18n="services.safari.highlight">Destaque: Safari de vida selvagem</span>
               </p>
-              <a href="#documentation" class="btn btn-primary mt-3">Saiba Mais</a>
+              <a href="#safari" class="btn btn-primary mt-3" data-i18n="services.safari.btn">Ver Detalhes</a>
             </div>
           </div>
 
+          <!-- EXTRA PACKAGE -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="500">
+            <div class="icon-box icon-box-service">
+              <div class="icon"><i class="ri-gift-line"></i></div>
+              <h4><a href="" data-i18n="services.extra.title">EXTRA PACKAGE</a></h4>
+              <p>
+                <span data-i18n="services.extra.duration">Half Day</span><br>
+                <span data-i18n="services.extra.price">Desde R 3,000</span><br>
+                <span data-i18n="services.extra.highlight">Destaque: Constantia Winery & Kirstenbosch Garden</span>
+              </p>
+              <a href="#extra" class="btn btn-primary mt-3" data-i18n="services.extra.btn">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <!-- VIP / PRIVATE TOUR -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="600">
+            <div class="icon-box icon-box-service">
+              <div class="icon"><i class="ri-vip-crown-line"></i></div>
+              <h4><a href="" data-i18n="services.vip.title">VIP / PRIVATE TOUR</a></h4>
+              <p>
+                <span data-i18n="services.vip.duration">Full Day</span><br>
+                <span data-i18n="services.vip.price">Desde R 5,000</span><br>
+                <span data-i18n="services.vip.highlight">Destaque: Experiência exclusiva com guia privado</span>
+              </p>
+              <a href="#vip" class="btn btn-primary mt-3" data-i18n="services.vip.btn">Ver Detalhes</a>
+            </div>
+          </div>
+
+          <!-- CAPE AGULHAS TOUR -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="700">
+            <div class="icon-box icon-box-service">
+              <div class="icon"><i class="ri-compass-line"></i></div>
+              <h4><a href="" data-i18n="services.agulhas.title">CAPE AGULHAS TOUR</a></h4>
+              <p>
+                <span data-i18n="services.agulhas.duration">Full Day</span><br>
+                <span data-i18n="services.agulhas.price">Preço sob consulta</span><br>
+                <span data-i18n="services.agulhas.highlight">Destaque: Extremo Sul da África – encontro dos oceanos</span>
+              </p>
+              <a href="#agulhas" class="btn btn-primary mt-3" data-i18n="services.agulhas.btn">Ver Detalhes</a>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -265,9 +279,9 @@
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>Pronto para começar sua jornada?</h3>
-          <p> Entre em contato conosco hoje mesmo e descubra como podemos transformar sua experiência na África do Sul!</p>
-          <a class="cta-btn" href="#contact">Fale Conosco</a>
+          <h3 data-i18n="cta.title">Pronto para começar sua jornada?</h3>
+          <p data-i18n="cta.subtitle"> Entre em contato conosco hoje mesmo e descubra como podemos transformar sua experiência na África do Sul!</p>
+          <a class="cta-btn" href="#contact" data-i18n="cta.btn">Fale Conosco</a>
         </div>
 
       </div>
@@ -278,17 +292,17 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Destinos</h2>
-          <p>Principais Destinos na África do Sul</p>
+          <h2 data-i18n="portfolio.title">Destinos</h2>
+          <p data-i18n="portfolio.subtitle">Principais Destinos na África do Sul</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">Todos</li>
-              <li data-filter=".filter-cape">cape town</li>
-              <li data-filter=".filter-joburg">Joanesburgo</li>
-              <li data-filter=".filter-durban">Durban</li>
+              <li data-filter="*" class="filter-active" data-i18n="portfolio.all">Todos</li>
+              <li data-filter=".filter-cape" data-i18n="portfolio.capetown">Cidade do Cabo</li>
+              <li data-filter=".filter-joburg" data-i18n="portfolio.joburg">Joanesburgo</li>
+              <li data-filter=".filter-durban" data-i18n="portfolio.durban">Durban</li>
             </ul>
           </div>
         </div>
@@ -299,8 +313,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/cidade-cabo1.jpg" class="img-fluid" alt="Cidade do Cabo">
               <div class="portfolio-info">
-                <h4>Cidade do Cabo</h4>
-                <p>Table Mountain</p>
+                <h4 data-i18n="portfolio.capetown">Cidade do Cabo</h4>
+                <p data-i18n="portfolio.capetown.desc">Table Mountain</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/cidade-cabo2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cidade do Cabo - Table Mountain"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
@@ -313,8 +327,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/joburg1.jpg" class="img-fluid" alt="Joanesburgo">
               <div class="portfolio-info">
-                <h4>Joanesburgo</h4>
-                <p>Centro Financeiro</p>
+                <h4 data-i18n="portfolio.joburg">Joanesburgo</h4>
+                <p data-i18n="portfolio.joburg.desc">Centro Financeiro</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/joburg2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Joanesburgo - Centro Financeiro"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
@@ -327,8 +341,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/durban1.jpg" class="img-fluid" alt="Durban">
               <div class="portfolio-info">
-                <h4>Durban</h4>
-                <p>Praias Paradisíacas</p>
+                <h4 data-i18n="portfolio.durban">Durban</h4>
+                <p data-i18n="portfolio.durban.desc">Praias Paradisíacas</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/durban2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Durban - Praias"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
@@ -341,8 +355,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/cidade-cabo2.jpg" class="img-fluid" alt="Cidade do Cabo">
               <div class="portfolio-info">
-                <h4>Cidade do Cabo</h4>
-                <p>Vinícolas</p>
+                <h4 data-i18n="portfolio.capetown">Cidade do Cabo</h4>
+                <p data-i18n="portfolio.capetown.wineries">Vinícolas</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/cidade-cabo1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cidade do Cabo - Vinícolas"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
@@ -355,8 +369,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/joburg2.jpg" class="img-fluid" alt="Joanesburgo">
               <div class="portfolio-info">
-                <h4>Joanesburgo</h4>
-                <p>Soweto</p>
+                <h4 data-i18n="portfolio.joburg">Joanesburgo</h4>
+                <p data-i18n="portfolio.joburg.soweto">Soweto</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/joburg1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Joanesburgo - Soweto"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
@@ -369,8 +383,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/durban2.jpg" class="img-fluid" alt="Durban">
               <div class="portfolio-info">
-                <h4>Durban</h4>
-                <p>Vida Noturna</p>
+                <h4 data-i18n="portfolio.durban">Durban</h4>
+                <p data-i18n="portfolio.durban.nightlife">Vida Noturna</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/durban1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Durban - Vida Noturna"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
@@ -385,96 +399,60 @@
     </section><!-- End Portfolio Section -->
 
 
-    <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Eventos</h2>
-          <p>Nossos Próximos Eventos</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/events/event-1.jpg" alt="Evento 1">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Feira de Estudos na África do Sul</a></h5>
-                <p class="fst-italic text-center">Sexta-feira, 12 de Novembro de 2023</p>
-                <p class="card-text">Venha conhecer as melhores oportunidades de estudo na África do Sul com representantes das principais universidades.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/events/event-2.jpg" alt="Evento 2">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Workshop de Documentação</a></h5>
-                <p class="fst-italic text-center">Sábado, 20 de Novembro de 2023</p>
-                <p class="card-text">Aprenda tudo sobre os documentos necessários para viajar, estudar ou trabalhar na África do Sul.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Events Section -->
+    <!-- ======= Events Section FOI ELIMINADO ESSA PARTE ======= -->
+    <!-- End Events Section -->
 
     <!-- ======= FAQ Section ======= -->
     <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>FAQ</h2>
-          <p>Perguntas Frequentes</p>
+          <h2 data-i18n="faq.title">FAQ</h2>
+          <p data-i18n="faq.subtitle">Perguntas Frequentes</p>
         </div>
 
         <div class="faq-list">
           <ul>
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Quais documentos são necessários para viajar para a África do Sul? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1" data-i18n="faq.q1">Quais documentos são necessários para viajar para a África do Sul? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                <p>
+                <p data-i18n="faq.a1">
                   Para viajar à África do Sul como turista, você precisará de passaporte válido por pelo menos 6 meses, visto (quando necessário), comprovante de hospedagem, passagem de volta e comprovante de recursos financeiros. Para estudo ou trabalho, são necessários documentos adicionais específicos.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Como posso encontrar acomodação segura na África do Sul? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed" data-i18n="faq.q2">Como posso encontrar acomodação segura na África do Sul? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p data-i18n="faq.a2">
                   A Izamo oferece um serviço completo de busca de acomodação, considerando sua localização preferencial, orçamento e necessidades específicas. Trabalhamos apenas com imóveis em áreas seguras e com proprietários confiáveis.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Quanto tempo leva para obter um visto de estudante? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed" data-i18n="faq.q3">Quanto tempo leva para obter um visto de estudante? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p data-i18n="faq.a3">
                   O processo de visto de estudante normalmente leva de 6 a 8 semanas após a entrega de todos os documentos necessários. Recomendamos iniciar o processo com pelo menos 3 meses de antecedência para evitar contratempos.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Quais são as melhores cidades para estudantes na África do Sul? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed" data-i18n="faq.q4">Quais são as melhores cidades para estudantes na África do Sul? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p data-i18n="faq.a4">
                   As cidades mais populares para estudantes são Cidade do Cabo (UCT, UWC), Joanesburgo (Wits, UJ), Pretória (UP, TUT), Stellenbosch (SU) e Durban (UKZN). Cada uma oferece vantagens específicas em termos de qualidade de vida, custo e especializações acadêmicas.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="500">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">A Izamo oferece suporte após a chegada à África do Sul? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed" data-i18n="faq.q5">A Izamo oferece suporte após a chegada à África do Sul? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                <p>
+                <p data-i18n="faq.a5">
                   Sim, oferecemos suporte completo desde o planejamento da viagem até sua estadia na África do Sul. Nossos serviços incluem transfer do aeroporto, orientação sobre a cidade, ajuda com abertura de contas bancárias, registro na polícia (quando necessário) e suporte contínuo durante toda sua estadia.
                 </p>
               </div>
@@ -491,8 +469,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contato</h2>
-          <p>Entre em Contato Conosco</p>
+          <h2 data-i18n="contact.title">Contato</h2>
+          <p data-i18n="contact.subtitle">Entre em Contato Conosco</p>
         </div>
 
         <div>
@@ -502,62 +480,80 @@
       </iframe>      
         </div>
 
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
+        <div class="row mt-5 justify-content-center">
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="contact-card">
+              <div class="contact-icon">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Localização:</h4>
-                <p>Cape town, África do Sul</p>
               </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>izamo@izamo.net</p>
+              <div class="contact-content">
+                <h4 data-i18n="contact.location.title">Localização</h4>
+                <p data-i18n="contact.location">Cape Town, África do Sul</p>
+                <a href="https://maps.google.com/?q=Cape+Town+South+Africa" target="_blank" class="contact-link">
+                  <i class="bi bi-arrow-right"></i> Ver no Mapa
+                </a>
               </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Telefones:</h4>
-                <p>+27 66 591 5581 (África do Sul)</p>
-                <p>+27 62 577 4340 (África do Sul)</p>
-                <p>+244 948 974 542 (Angola)</p>
-                <p>+244 950 709 957 (Angola)</p>
-              </div>
-
             </div>
+              </div>
 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-content">
+                <h4 data-i18n="contact.email.title">Email</h4>
+                <p>izamo@izamo.net</p>
+                <a href="mailto:izamo@izamo.net" class="contact-link">
+                  <i class="bi bi-arrow-right"></i> Enviar Email
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" required>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="bi bi-phone"></i>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
+              <div class="contact-content">
+                <h4 data-i18n="contact.phone.title">Telefones</h4>
+                <div class="phone-list">
+                  <p><strong>África do Sul:</strong></p>
+                  <p><a href="tel:+27665915581">+27 66 591 5581</a></p>
+                  <p><a href="tel:+27625774340">+27 62 577 4340</a></p>
+                  <p><strong>Angola:</strong></p>
+                  <p><a href="tel:+244948974542">+244 948 974 542</a></p>
+                  <p><a href="tel:+244950709957">+244 950 709 957</a></p>
                 </div>
+                <a href="https://wa.me/27665915581" target="_blank" class="contact-link whatsapp-link">
+                  <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Enviando</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar Mensagem</button></div>
-            </form>
-
           </div>
 
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <div class="contact-cta">
+              <h3 data-i18n="contact.cta.title">Pronto para começar sua jornada?</h3>
+              <p data-i18n="contact.cta.subtitle">Entre em contato conosco através de qualquer um dos canais acima</p>
+              <div class="contact-buttons">
+                <a href="https://wa.me/27665915581" target="_blank" class="btn btn-whatsapp">
+                  <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
+                <a href="mailto:izamo@izamo.net" class="btn btn-email">
+                  <i class="bi bi-envelope"></i> Email
+                </a>
+                <a href="tel:+27665915581" class="btn btn-phone">
+                  <i class="bi bi-telephone"></i> Ligar
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -579,7 +575,7 @@
               <p>
                 Cape Town <br>
                 África do Sul<br><br>
-                <strong>Telefones:</strong><br>
+                <strong data-i18n="footer.phones">Telefones:</strong><br>
                 +27 66 591 5581 (África do Sul)<br>
                 +27 62 577 4340 (África do Sul)<br>
                 +244 948 974 542 (Angola)<br>
@@ -596,42 +592,41 @@
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links Úteis</h4>
+            <h4 data-i18n="footer.useful">Links Úteis</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Página Inicial</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">Sobre Nós</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Catálogo de Serviços</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#know-more">Saiba Mais</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero" data-i18n="nav.home">Página Inicial</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about" data-i18n="nav.about">Sobre Nós</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services" data-i18n="nav.services">Catálogo de Serviços</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#know-more" data-i18n="footer.knowmore">Saiba Mais</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#faq">FAQ</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Nossos Serviços</h4>
+            <h4 data-i18n="footer.ourtours">Nossos Passeios</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#accommodation">Serviços de Alojamento</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#tourism">Serviços de Turismo</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#transport">Serviços de Transporte</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#documentation">Assessoria Documental</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#events">Eventos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#citytour" data-i18n="footer.citytour">City Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#peninsula" data-i18n="footer.peninsula">Cape Peninsula Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#winery" data-i18n="footer.winery">Winery Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#safari" data-i18n="footer.safari">Safari Aquila</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#extra" data-i18n="footer.extra">Extra Package</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#vip" data-i18n="footer.vip">VIP / Private Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#agulhas" data-i18n="footer.agulhas">Cape Agulhas Tour</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Newsletter</h4>
-            <p>Assine nossa newsletter e receba novidades e promoções exclusivas</p>
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Seu Email"><input type="submit" value="Assinar">
-            </form>
+          
+      
 
             <div class="mt-4">
-              <h5>Termos e Condições</h5>
-              <a href="#" class="small">Leia nossos termos de serviço</a>
+              <h5 data-i18n="footer.terms.title">Termos e Condições</h5>
+              <a href="assets/termos/termoServiço.pdf" target="_blank" rel="noopener" class="small footer-terms-link" data-i18n="footer.terms.link">Leia nossos termos de serviço</a>
             </div>
 
             <div class="mt-3">
-              <h5>Parceiros e Colaboradores</h5>
-              <a href="#" class="small">Conheça nossa rede de parceiros</a>
+              <h5 data-i18n="footer.partners.title">Parceiros e Colaboradores</h5>
+              <a href="#" class="small" data-i18n="footer.partners.link">Conheça nossa rede de parceiros</a>
             </div>
           </div>
 
@@ -641,10 +636,10 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Izamo</span></strong>. Todos os direitos reservados
+        &copy; Copyright <strong><span>Izamo</span></strong>. <span data-i18n="footer.copyright">Todos os direitos reservados</span>
       </div>
       <div class="credits">
-        Desenvolvido por <a href="#">Jamofloga Team</a>
+        <span data-i18n="footer.developed">Desenvolvido por</span> <a href="#">Jamofloga Team</a>
       </div>
     </div>
   </footer><!-- End Footer -->
