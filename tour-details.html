@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Detalhes do Passeio | Izamo</title>
+  <meta content="Detalhes dos passeios da Izamo" name="description">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/Izamo-logo.png" alt="Izamo"></a>
+      </div>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+                     <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
+           <li><a class="nav-link scrollto" href="index.html#services">Tours</a></li>
+           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 110px;">
+    <!-- Tour Header / Hero -->
+    <section class="tour-hero">
+      <div class="container" data-aos="fade-up">
+        <div class="tour-hero-card">
+          <div>
+                         <h1 id="tour-title" class="mb-2">Tour Details</h1>
+             <p id="tour-subtitle" class="mb-0">Information and photos</p>
+          </div>
+          <div class="tour-badges">
+            <span class="badge-gold" id="tour-badge-duration" style="display:none;"></span>
+            <span class="badge-gold" id="tour-badge-type" style="display:none;"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour-details">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100">
+            <div class="swiper tour-swiper rounded-4 shadow-lg">
+              <div class="swiper-wrapper" id="slides-container">
+                <!-- Slides injetados via JS -->
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper tour-thumbs mt-3">
+              <div class="swiper-wrapper" id="thumbs-container">
+                <!-- Thumbs injetadas via JS -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+            <div class="tour-info-card">
+                             <div class="tour-price" id="tour-price">Price</div>
+              <div class="tour-section mt-3">
+                <h4 class="tour-section-title" data-i18n="tour.visited">Locais visitados</h4>
+                <ul id="tour-stops" class="tour-stops"></ul>
+              </div>
+              <div class="tour-section mt-3" id="tour-extras-wrapper" style="display:none;">
+                <h4 class="tour-section-title" data-i18n="tour.info">Informações</h4>
+                <p id="tour-extras" class="mb-0"></p>
+              </div>
+              <div class="mt-4 d-flex gap-2 flex-wrap">
+                <a id="reserve-btn" href="https://wa.me/27607835013" target="_blank" class="btn btn-gold"><i class="bi bi-whatsapp me-1"></i><span data-i18n="tour.reserve">Reservar</span></a>
+                <a href="index.html#services" class="btn btn-outline-gold"><i class="bi bi-arrow-left me-1"></i><span data-i18n="tour.back">Back Home</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+                 &copy; Copyright <strong><span>Izamo</span></strong>. All rights reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    (function() {
+      // Aguardar o carregamento completo da página e do main.js
+      window.addEventListener('load', function() {
+        const getParam = (name) => new URLSearchParams(window.location.search).get(name) || '';
+        const tourKey = (getParam('tour') || '').toLowerCase();
+        
+        // Obter idioma salvo (padrão: inglês)
+        let currentLang = 'en';
+        try { 
+          currentLang = localStorage.getItem('site_lang') || 'en'; 
+        } catch(e) { 
+          currentLang = 'en'; 
+        }
+
+      /**
+       * Definições dos tours
+       * key: {
+       *   title, subtitle, price, images[], stops[], extras
+       * }
+       */
+      const TOURS_I18N = {
+        en: {
+          citytour: {
+            title: 'CITY TOUR',
+            subtitle: 'Half Day (7am – 1pm)',
+            price: 'Price: R 3,000 (Small Group), R 4,000 (Big Group)',
+            folder: 'assets/img/CITY_TOUR',
+            images: [
+              'CASTEL_OF_GOOD_HOPE_1.jpg','CASTEL_OF_GOOD_HOPE_2.jpg',
+              'DISTRICT_SIX_MUSEUM_1.jpg','DISTRICT_SIX_MUSEUM_2.jpg',
+              'JEWISH_MUSEUM_1.jpg','JEWISH_MUSEUM_2.jpg',
+              'NATIONAL_LIBRARY_1.jpg','NATIONAL_LIBRARY_2.jpg',
+              'PARADE_1.jpg','PARADE_2.jpg',
+              'SLAVE_LODGE_1.jpg','SLAVE_LODGE_2.jpg',
+              'TABLE_MOUNTAIN_1.jpg','TABLE_MOUNTAIN_2.jpg','TABLE_MOUNTAIN_3.jpg',
+              'WATER_FRONT_1.jpg','WATER_FRONT_2.jpg'
+            ],
+            stops: [
+              'Cape Castle of Good Hope','National Library','Parade','District Six Museum',
+              'Jewish Museum','Parliament','Slave Lodge','Table Mountain','Waterfront'
+            ]
+          },
+          peninsula: {
+            title: 'CAPE PENINSULA TOUR',
+            subtitle: 'Full Day (7am – 6pm)',
+            price: 'Price: R 5,000 (Small Group), R 7,500 (Big Group)',
+            folder: 'assets/img/CAPE_PENINSULA_TOUR',
+            images: [
+              'BANTRY_BAY_1.jpg','Bo-kaap_1.jpg','Bo-kaap_2.jpg','CAMPS_BAY_1.jpg',
+              'CAPE_OF_GOOD_HOPE_1.jpg','CHAPMAN_PEAK_AK_DRIVE_1.jpg','CLIFTON_1.jpg','SEA_POINT_1.jpg'
+            ],
+            stops: [
+              'Bo-Kaap, Sea Point, Bantry Bay, Clifton, Maiden Cove, Camps Bay, Llandudno, Hout Bay',
+              'Chapman’s Peak Drive, Noordhoek, Masiphumelele, Ocean View, Mr. Clift, Scarborough',
+              'Cape of Good Hope, Penguins (Boulders Beach), Muizenberg'
+            ]
+          },
+          winery: {
+            title: 'WINERY TOUR',
+            subtitle: 'Full Day (8am – 5pm)',
+            price: 'Price: R 5,000 (Small Group), R 7,500 (Big Group)',
+            folder: 'assets/img/WINERY_TOUR',
+            images: ['FRANSCHHOEK_1.jpg','FRANSCHHOEK_2.jpg','STELLENBOSCH_1.jpg','STELLENBOSCH_2.jpg'],
+            stops: ['Wine Island','Stellenbosch','Franschhoek']
+          },
+          safari: {
+            title: 'SAFARI AQUILA',
+            subtitle: 'Full Day (5am – 6pm)',
+            price: 'Price: Calculated per kilometer',
+            folder: 'assets/img/SAFARI_AQUILA',
+            images: ['SAFARI_AQUILA_1.jpg','SAFARI_AQUILA_2.jpg','SAFARI_AQUILA_3.jpg','SAFARI_AQUILA_4.jpg'],
+            extras: 'Experience: Full safari at Aquila Game Reserve',
+            stops: []
+          },
+          extra: {
+            title: 'EXTRA PACKAGE',
+            subtitle: 'Half Day',
+            price: 'Price: R 3,000 (Small Group), R 4,000 (Big Group)',
+            folder: 'assets/img/EXTRA_PACKAGE',
+            images: ['CONSTANTIA_1.jpg','CONSTANTIA_2.jpg','KIRSTENBOSCH_1.jpg','KIRSTENBOSCH_2.jpg'],
+            extras: 'Included: Constantia Winery, Kirstenbosch Garden',
+            stops: []
+          },
+          vip: {
+            title: 'VIP / PRIVATE TOUR',
+            subtitle: 'Full Day',
+            price: 'Price: R 5,000 (Small Group), R 7,500 (Big Group)',
+            folder: 'assets/img/VIPTOUR_PRIVATETOUR',
+            images: ['VIP_1.jpg','VIP_2.jpg','VIP_3.jpg'],
+            extras: 'Advantages: Flexible itinerary, private transport, exclusive guide',
+            stops: []
+          },
+          agulhas: {
+            title: 'CAPE AGULHAS TOUR',
+            subtitle: 'Full Day',
+            price: 'Price on request',
+            folder: 'assets/img/CAPE_AGULHAS_TOUR',
+            images: ['CAPE_AGULHAS_1.jpg','CAPE_AGULHAS_2.jpg','CAPE_AGULHAS_3.jpg'],
+            stops: ['Cape Agulhas, meeting point of the Atlantic and Indian oceans'],
+            extras: 'Includes: Transport, guide, scenic stops'
+          }
+        },
+        pt: {
+          citytour: {
+            title: 'CITY TOUR',
+            subtitle: 'Half Day (7am – 1pm)',
+            price: 'Preço: R 3,000 (Small Group), R 4,000 (Big Group)',
+            folder: 'assets/img/CITY_TOUR',
+            images: [
+              'CASTEL_OF_GOOD_HOPE_1.jpg','CASTEL_OF_GOOD_HOPE_2.jpg',
+              'DISTRICT_SIX_MUSEUM_1.jpg','DISTRICT_SIX_MUSEUM_2.jpg',
+              'JEWISH_MUSEUM_1.jpg','JEWISH_MUSEUM_2.jpg',
+              'NATIONAL_LIBRARY_1.jpg','NATIONAL_LIBRARY_2.jpg',
+              'PARADE_1.jpg','PARADE_2.jpg',
+              'SLAVE_LODGE_1.jpg','SLAVE_LODGE_2.jpg',
+              'TABLE_MOUNTAIN_1.jpg','TABLE_MOUNTAIN_2.jpg','TABLE_MOUNTAIN_3.jpg',
+              'WATER_FRONT_1.jpg','WATER_FRONT_2.jpg'
+            ],
+            stops: [
+              'Cape Castle of Good Hope','National Library','Parade','District Six Museum',
+              'Jewish Museum','Parliament','Slave Lodge','Table Mountain','Waterfront'
+            ]
+          },
+          peninsula: {
+            title: 'CAPE PENINSULA TOUR',
+            subtitle: 'Full Day (7am – 6pm)',
+            price: 'Preço: R 5,000 (Small Group), R 7,500 (Big Group)',
+            folder: 'assets/img/CAPE_PENINSULA_TOUR',
+            images: [
+              'BANTRY_BAY_1.jpg','Bo-kaap_1.jpg','Bo-kaap_2.jpg','CAMPS_BAY_1.jpg',
+              'CAPE_OF_GOOD_HOPE_1.jpg','CHAPMAN_PEAK_AK_DRIVE_1.jpg','CLIFTON_1.jpg','SEA_POINT_1.jpg'
+            ],
+            stops: [
+              'Bokaap, Sea Point, Bantry Bay, Clifton, Maiden Cove, Camps Bay, Llandudno, Hout Bay',
+              'Chapman’s Peak Drive, Noordhoek, Masiphumelele, Ocean View, Mr. Clift, Scarborough',
+              'Cape of Good Hope, Penguins (Boulders Beach), Muizenberg'
+            ]
+          },
+          winery: {
+            title: 'WINERY TOUR',
+            subtitle: 'Full Day (8am – 5pm)',
+            price: 'Preço: R 5,000 (Small Group), R 7,500 (Big Group)',
+            folder: 'assets/img/WINERY_TOUR',
+            images: ['FRANSCHHOEK_1.jpg','FRANSCHHOEK_2.jpg','STELLENBOSCH_1.jpg','STELLENBOSCH_2.jpg'],
+            stops: ['Wine Island','Stellenbosch','Franschhoek']
+          },
+          safari: {
+            title: 'SAFARI AQUILA',
+            subtitle: 'Full Day (5am – 6pm)',
+            price: 'Preço: Calculado por quilômetro',
+            folder: 'assets/img/SAFARI_AQUILA',
+            images: ['SAFARI_AQUILA_1.jpg','SAFARI_AQUILA_2.jpg','SAFARI_AQUILA_3.jpg','SAFARI_AQUILA_4.jpg'],
+            extras: 'Experiência: Safari completo no Aquila Game Reserve',
+            stops: []
+          },
+          extra: {
+            title: 'EXTRA PACKAGE',
+            subtitle: 'Half Day',
+            price: 'Preço: R 3,000 (Small Group), R 4,000 (Big Group)',
+            folder: 'assets/img/EXTRA_PACKAGE',
+            images: ['CONSTANTIA_1.jpg','CONSTANTIA_2.jpg','KIRSTENBOSCH_1.jpg','KIRSTENBOSCH_2.jpg'],
+            extras: 'Locais incluídos: Constantia Winery, Kirstenbosch Garden',
+            stops: []
+          },
+          vip: {
+            title: 'VIP / PRIVATE TOUR',
+            subtitle: 'Full Day',
+            price: 'Preço: R 5,000 (Small Group), R 7,500 (Big Group)',
+            folder: 'assets/img/VIPTOUR_PRIVATETOUR',
+            images: ['VIP_1.jpg','VIP_2.jpg','VIP_3.jpg'],
+            extras: 'Vantagens: Itinerário flexível, transporte privado, guia exclusivo',
+            stops: []
+          },
+          agulhas: {
+            title: 'CAPE AGULHAS TOUR',
+            subtitle: 'Full Day',
+            price: 'Preço sob consulta',
+            folder: 'assets/img/CAPE_AGULHAS_TOUR',
+            images: ['CAPE_AGULHAS_1.jpg','CAPE_AGULHAS_2.jpg','CAPE_AGULHAS_3.jpg'],
+            stops: ['Cape Agulhas, ponto de encontro dos oceanos Atlântico e Índico'],
+            extras: 'Inclui: Transporte, guia, paradas panorâmicas'
+          }
+        }
+      };
+
+        const dict = (TOURS_I18N[currentLang] || TOURS_I18N.en);
+        const data = dict[tourKey] || dict.citytour;
+
+        document.getElementById('tour-title').textContent = data.title;
+        document.getElementById('tour-subtitle').textContent = data.subtitle || '';
+        document.getElementById('tour-price').textContent = data.price || '';
+
+        const stopsUl = document.getElementById('tour-stops');
+        stopsUl.innerHTML = '';
+        (data.stops || []).forEach((s) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<i class="bi bi-geo-alt"></i><span>${s}</span>`;
+          stopsUl.appendChild(li);
+        });
+
+        if (data.extras) {
+          document.getElementById('tour-extras').textContent = data.extras;
+          document.getElementById('tour-extras-wrapper').style.display = '';
+        }
+
+        const slides = document.getElementById('slides-container');
+        const thumbs = document.getElementById('thumbs-container');
+        (data.images || []).forEach((img) => {
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide';
+          slide.innerHTML = `<a href="${data.folder}/${img}" class="glightbox" data-gallery="tourGallery"><img src="${data.folder}/${img}" class="img-fluid" alt="${data.title}"></a>`;
+          slides.appendChild(slide);
+
+          const thumb = document.createElement('div');
+          thumb.className = 'swiper-slide';
+          thumb.innerHTML = `<img src="${data.folder}/${img}" class="img-fluid" alt="${data.title}">`;
+          thumbs.appendChild(thumb);
+        });
+
+        const lightbox = GLightbox({ selector: '.glightbox' });
+        const thumbsSwiper = new Swiper('.tour-thumbs', {
+          spaceBetween: 10,
+          slidesPerView: 5,
+          freeMode: true,
+          watchSlidesProgress: true,
+          breakpoints: {
+            0: { slidesPerView: 4 },
+            576: { slidesPerView: 5 },
+            992: { slidesPerView: 6 }
+          }
+        });
+
+        new Swiper('.tour-swiper', {
+          speed: 600,
+          loop: true,
+          autoplay: { delay: 4000, disableOnInteraction: false },
+          pagination: { el: '.swiper-pagination', clickable: true },
+          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+          thumbs: { swiper: thumbsSwiper }
+        });
+
+        AOS.init({ duration: 1000, easing: 'ease-in-out', once: true, mirror: false });
+
+        // Badges auxiliares
+        const badgeDuration = document.getElementById('tour-badge-duration');
+        const badgeType = document.getElementById('tour-badge-type');
+        if (data.subtitle) {
+          badgeDuration.textContent = data.subtitle;
+          badgeDuration.style.display = '';
+        }
+        if (tourKey === 'vip') {
+          badgeType.textContent = currentLang === 'pt' ? 'Privado' : 'Private';
+          badgeType.style.display = '';
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
+
+

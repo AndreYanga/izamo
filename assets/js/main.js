@@ -370,6 +370,12 @@
       'services.agulhas.highlight': 'Destaque: Extremo Sul da África – encontro dos oceanos',
       'services.agulhas.btn': 'Ver Detalhes',
       
+      // Tour Details Page
+      'tour.visited': 'Locais visitados',
+      'tour.info': 'Informações',
+      'tour.reserve': 'Reservar',
+      'tour.back': 'Back Home',
+      
       // CTA Section
       'cta.title': 'Pronto para começar sua jornada?',
       'cta.subtitle': 'Entre em contato conosco hoje mesmo e descubra como podemos transformar sua experiência na África do Sul!',
@@ -440,10 +446,10 @@
       'footer.newsletter.desc': 'Assine nossa newsletter e receba novidades e promoções exclusivas',
       'footer.newsletter.email': 'Seu Email',
       'footer.newsletter.submit': 'Assinar',
+      'footer.privacy.title': 'Política de Privacidade',
+      'footer.privacy.link': 'Política de Privacidade',
       'footer.terms.title': 'Termos e Condições',
-      'footer.terms.link': 'Leia nossos termos de serviço',
-      'footer.partners.title': 'Parceiros e Colaboradores',
-      'footer.partners.link': 'Conheça nossa rede de parceiros',
+      'footer.terms.link': 'Termos e Condições',
       'footer.copyright': 'Todos os direitos reservados',
       'footer.developed': 'Desenvolvido por'
     },
@@ -522,6 +528,12 @@
       'services.agulhas.highlight': 'Highlight: Southernmost point of Africa – meeting of the oceans',
       'services.agulhas.btn': 'View Details',
       
+      // Tour Details Page
+      'tour.visited': 'Visited places',
+      'tour.info': 'Information',
+      'tour.reserve': 'Book Now',
+      'tour.back': 'Back Home',
+      
       // CTA Section
       'cta.title': 'Ready to start your journey?',
       'cta.subtitle': 'Contact us today and discover how we can transform your experience in South Africa!',
@@ -588,17 +600,17 @@
        'footer.extra': 'Extra Package',
        'footer.vip': 'VIP / Private Tour',
        'footer.agulhas': 'Cape Agulhas Tour',
+      'footer.privacy.title': 'Privacy Policy',
+      'footer.privacy.link': 'Privacy Policy',
       'footer.terms.title': 'Terms and Conditions',
-      'footer.terms.link': 'Read our terms of service',
-      'footer.partners.title': 'Partners and Collaborators',
-      'footer.partners.link': 'Meet our partner network',
+      'footer.terms.link': 'Terms and Conditions',
       'footer.copyright': 'All rights reserved',
       'footer.developed': 'Developed by'
     }
   };
 
   const getSavedLang = () => {
-    try { return localStorage.getItem('site_lang') || 'pt'; } catch(e) { return 'pt'; }
+    try { return localStorage.getItem('site_lang') || 'en'; } catch(e) { return 'en'; }
   };
   const saveLang = (lang) => { try { localStorage.setItem('site_lang', lang); } catch(e) {} };
 
@@ -636,6 +648,106 @@
         }
       });
     });
+
+    // Build Portfolio dynamically (first 4 images per tour)
+    const portfolioRoot = document.getElementById('portfolio-dynamic');
+    if (portfolioRoot) {
+      const lang = getSavedLang();
+      const TOURS = {
+        citytour: {
+          titleKey: 'services.citytour.title',
+          folder: 'assets/img/CITY_TOUR',
+          images: [
+            'CASTEL_OF_GOOD_HOPE_1.jpg','DISTRICT_SIX_MUSEUM_1.jpg',
+            'TABLE_MOUNTAIN_1.jpg','WATER_FRONT_1.jpg'
+          ]
+        },
+        peninsula: {
+          titleKey: 'services.peninsula.title',
+          folder: 'assets/img/CAPE_PENINSULA_TOUR',
+          images: [
+            'BANTRY_BAY_1.jpg','CAMPS_BAY_1.jpg','CAPE_OF_GOOD_HOPE_1.jpg','SEA_POINT_1.jpg'
+          ]
+        },
+        winery: {
+          titleKey: 'services.winery.title',
+          folder: 'assets/img/WINERY_TOUR',
+          images: ['FRANSCHHOEK_1.jpg','FRANSCHHOEK_2.jpg','STELLENBOSCH_1.jpg','STELLENBOSCH_2.jpg']
+        },
+        safari: {
+          titleKey: 'services.safari.title',
+          folder: 'assets/img/SAFARI_AQUILA',
+          images: ['SAFARI_AQUILA_1.jpg','SAFARI_AQUILA_2.jpg','SAFARI_AQUILA_3.jpg','SAFARI_AQUILA_4.jpg']
+        },
+        extra: {
+          titleKey: 'services.extra.title',
+          folder: 'assets/img/EXTRA_PACKAGE',
+          images: ['CONSTANTIA_1.jpg','CONSTANTIA_2.jpg','KIRSTENBOSCH_1.jpg','KIRSTENBOSCH_2.jpg']
+        },
+        vip: {
+          titleKey: 'services.vip.title',
+          folder: 'assets/img/VIPTOUR_PRIVATETOUR',
+          images: ['VIP_1.jpg','VIP_2.jpg','VIP_3.jpg']
+        },
+        agulhas: {
+          titleKey: 'services.agulhas.title',
+          folder: 'assets/img/CAPE_AGULHAS_TOUR',
+          images: ['CAPE_AGULHAS_1.jpg','CAPE_AGULHAS_2.jpg','CAPE_AGULHAS_3.jpg']
+        }
+      };
+
+      const dict = translations[lang] || translations.en;
+      const buildCard = (key, cfg) => {
+        const filterClass = `filter-${key}`;
+        return cfg.images.slice(0, 4).map((img) => {
+          const title = dict[cfg.titleKey] || key;
+          const href = `${cfg.folder}/${img}`;
+          return `
+          <div class="col-lg-4 col-md-6 portfolio-item ${filterClass}">
+            <div class="portfolio-wrap">
+              <img src="${href}" class="img-fluid" alt="${title}">
+              <div class="portfolio-info">
+                <h4>${title}</h4>
+                <div class="portfolio-links">
+                  <a href="${href}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${title}"><i class="bx bx-plus"></i></a>
+                  <a href="tour-details.html?tour=${key}" title="${title}"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }).join('');
+      };
+
+      portfolioRoot.innerHTML = [
+        buildCard('citytour', TOURS.citytour),
+        buildCard('peninsula', TOURS.peninsula),
+        buildCard('winery', TOURS.winery),
+        buildCard('safari', TOURS.safari),
+        buildCard('extra', TOURS.extra),
+        buildCard('vip', TOURS.vip),
+        buildCard('agulhas', TOURS.agulhas)
+      ].join('');
+
+      // Init Isotope on dynamic content
+      let portfolioIsotope = new Isotope(portfolioRoot, { itemSelector: '.portfolio-item' });
+
+      // Bind filters
+      const portfolioFilters = select('#portfolio-flters li', true);
+      portfolioFilters.forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          portfolioFilters.forEach((f) => f.classList.remove('filter-active'));
+          this.classList.add('filter-active');
+          const filter = this.getAttribute('data-filter');
+          portfolioIsotope.arrange({ filter });
+          portfolioIsotope.on('arrangeComplete', function() { AOS.refresh(); });
+        });
+      });
+
+      // Re-init GLightbox and AOS after injecting
+      GLightbox({ selector: '.portfolio-lightbox' });
+      AOS.refresh();
+    }
   });
 
 })()

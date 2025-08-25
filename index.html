@@ -87,12 +87,12 @@
   <!-- ======= Sidebar Social ======= -->
   <div class="sidebar-social">
     <a href="mailto:izamo@izamo.net" class="email" title="E-mail"><i class="bi bi-envelope"></i></a>
-    <a href="https://wa.me/27665915581" class="whatsapp" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a href="https://wa.me/27607835013" class="whatsapp" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
     <a href="tel:+244948974542" class="phone" title="Ligar"><i class="bi bi-telephone"></i></a>
-    <a href="#" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="tiktok" title="TikTok"><i class="bi bi-tiktok"></i></a>
-    <a href="#" class="youtube" title="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="https://www.facebook.com/izamo_ltd" target="_blank" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/izamo_pty" target="_blank" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.tiktok.com/izamo_pty" target="_blank" class="tiktok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+    <a href="https://www.youtube.com/izamo_ltd" target="_blank" class="youtube" title="YouTube"><i class="bi bi-youtube"></i></a>
   </div>
 
   <main id="main">
@@ -182,7 +182,7 @@
                 <span data-i18n="services.citytour.price">Desde R 3,000</span><br>
                 <span data-i18n="services.citytour.highlight">Destaque: Table Mountain</span>
               </p>
-              <a href="#citytour" class="btn btn-primary mt-3" data-i18n="services.citytour.btn">Ver Detalhes</a>
+              <a href="tour-details.html?tour=citytour" class="btn btn-primary mt-3" data-i18n="services.citytour.btn">Ver Detalhes</a>
             </div>
           </div>
 
@@ -196,7 +196,7 @@
                 <span data-i18n="services.peninsula.price">Desde R 5,000</span><br>
                 <span data-i18n="services.peninsula.highlight">Destaque: Cape of Good Hope & Penguins (Boulders Beach)</span>
               </p>
-              <a href="#peninsula" class="btn btn-primary mt-3" data-i18n="services.peninsula.btn">Ver Detalhes</a>
+              <a href="tour-details.html?tour=peninsula" class="btn btn-primary mt-3" data-i18n="services.peninsula.btn">Ver Detalhes</a>
             </div>
           </div>
 
@@ -210,7 +210,7 @@
                 <span data-i18n="services.winery.price">Desde R 5,000</span><br>
                 <span data-i18n="services.winery.highlight">Destaque: Stellenbosch & Franschhoek</span>
               </p>
-              <a href="#winery" class="btn btn-primary mt-3" data-i18n="services.winery.btn">Ver Detalhes</a>
+              <a href="tour-details.html?tour=winery" class="btn btn-primary mt-3" data-i18n="services.winery.btn">Ver Detalhes</a>
             </div>
           </div>
 
@@ -224,7 +224,7 @@
                 <span data-i18n="services.safari.price">Preço sob consulta (por km)</span><br>
                 <span data-i18n="services.safari.highlight">Destaque: Safari de vida selvagem</span>
               </p>
-              <a href="#safari" class="btn btn-primary mt-3" data-i18n="services.safari.btn">Ver Detalhes</a>
+              <a href="tour-details.html?tour=safari" class="btn btn-primary mt-3" data-i18n="services.safari.btn">Ver Detalhes</a>
             </div>
           </div>
 
@@ -238,7 +238,7 @@
                 <span data-i18n="services.extra.price">Desde R 3,000</span><br>
                 <span data-i18n="services.extra.highlight">Destaque: Constantia Winery & Kirstenbosch Garden</span>
               </p>
-              <a href="#extra" class="btn btn-primary mt-3" data-i18n="services.extra.btn">Ver Detalhes</a>
+              <a href="tour-details.html?tour=extra" class="btn btn-primary mt-3" data-i18n="services.extra.btn">Ver Detalhes</a>
             </div>
           </div>
 
@@ -252,7 +252,7 @@
                 <span data-i18n="services.vip.price">Desde R 5,000</span><br>
                 <span data-i18n="services.vip.highlight">Destaque: Experiência exclusiva com guia privado</span>
               </p>
-              <a href="#vip" class="btn btn-primary mt-3" data-i18n="services.vip.btn">Ver Detalhes</a>
+              <a href="tour-details.html?tour=vip" class="btn btn-primary mt-3" data-i18n="services.vip.btn">Ver Detalhes</a>
             </div>
           </div>
 
@@ -266,7 +266,7 @@
                 <span data-i18n="services.agulhas.price">Preço sob consulta</span><br>
                 <span data-i18n="services.agulhas.highlight">Destaque: Extremo Sul da África – encontro dos oceanos</span>
               </p>
-              <a href="#agulhas" class="btn btn-primary mt-3" data-i18n="services.agulhas.btn">Ver Detalhes</a>
+              <a href="tour-details.html?tour=agulhas" class="btn btn-primary mt-3" data-i18n="services.agulhas.btn">Ver Detalhes</a>
             </div>
           </div>
         </div>
@@ -300,100 +300,18 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active" data-i18n="portfolio.all">Todos</li>
-              <li data-filter=".filter-cape" data-i18n="portfolio.capetown">Cidade do Cabo</li>
-              <li data-filter=".filter-joburg" data-i18n="portfolio.joburg">Joanesburgo</li>
-              <li data-filter=".filter-durban" data-i18n="portfolio.durban">Durban</li>
+              <li data-filter=".filter-citytour" data-i18n="services.citytour.title">CITY TOUR</li>
+              <li data-filter=".filter-peninsula" data-i18n="services.peninsula.title">CAPE PENINSULA TOUR</li>
+              <li data-filter=".filter-winery" data-i18n="services.winery.title">WINERY TOUR</li>
+              <li data-filter=".filter-safari" data-i18n="services.safari.title">SAFARI AQUILA</li>
+              <li data-filter=".filter-extra" data-i18n="services.extra.title">EXTRA PACKAGE</li>
+              <li data-filter=".filter-vip" data-i18n="services.vip.title">VIP / PRIVATE TOUR</li>
+              <li data-filter=".filter-agulhas" data-i18n="services.agulhas.title">CAPE AGULHAS TOUR</li>
             </ul>
           </div>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-cape">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/cidade-cabo1.jpg" class="img-fluid" alt="Cidade do Cabo">
-              <div class="portfolio-info">
-                <h4 data-i18n="portfolio.capetown">Cidade do Cabo</h4>
-                <p data-i18n="portfolio.capetown.desc">Table Mountain</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/cidade-cabo2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cidade do Cabo - Table Mountain"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-joburg">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/joburg1.jpg" class="img-fluid" alt="Joanesburgo">
-              <div class="portfolio-info">
-                <h4 data-i18n="portfolio.joburg">Joanesburgo</h4>
-                <p data-i18n="portfolio.joburg.desc">Centro Financeiro</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/joburg2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Joanesburgo - Centro Financeiro"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-durban">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/durban1.jpg" class="img-fluid" alt="Durban">
-              <div class="portfolio-info">
-                <h4 data-i18n="portfolio.durban">Durban</h4>
-                <p data-i18n="portfolio.durban.desc">Praias Paradisíacas</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/durban2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Durban - Praias"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-cape">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/cidade-cabo2.jpg" class="img-fluid" alt="Cidade do Cabo">
-              <div class="portfolio-info">
-                <h4 data-i18n="portfolio.capetown">Cidade do Cabo</h4>
-                <p data-i18n="portfolio.capetown.wineries">Vinícolas</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/cidade-cabo1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cidade do Cabo - Vinícolas"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-joburg">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/joburg2.jpg" class="img-fluid" alt="Joanesburgo">
-              <div class="portfolio-info">
-                <h4 data-i18n="portfolio.joburg">Joanesburgo</h4>
-                <p data-i18n="portfolio.joburg.soweto">Soweto</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/joburg1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Joanesburgo - Soweto"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-durban">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/durban2.jpg" class="img-fluid" alt="Durban">
-              <div class="portfolio-info">
-                <h4 data-i18n="portfolio.durban">Durban</h4>
-                <p data-i18n="portfolio.durban.nightlife">Vida Noturna</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/durban1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Durban - Vida Noturna"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Mais Detalhes"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <div id="portfolio-dynamic" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200"></div>
 
       </div>
     </section><!-- End Portfolio Section -->
@@ -521,13 +439,11 @@
                 <h4 data-i18n="contact.phone.title">Telefones</h4>
                 <div class="phone-list">
                   <p><strong>África do Sul:</strong></p>
-                  <p><a href="tel:+27665915581">+27 66 591 5581</a></p>
+                  <p><a href="tel:+27607835013">+27 60 783 5013</a></p>
                   <p><a href="tel:+27625774340">+27 62 577 4340</a></p>
-                  <p><strong>Angola:</strong></p>
-                  <p><a href="tel:+244948974542">+244 948 974 542</a></p>
-                  <p><a href="tel:+244950709957">+244 950 709 957</a></p>
+                  
                 </div>
-                <a href="https://wa.me/27665915581" target="_blank" class="contact-link whatsapp-link">
+                <a href="https://wa.me/27607835013" target="_blank" class="contact-link whatsapp-link">
                   <i class="bi bi-whatsapp"></i> WhatsApp
                 </a>
               </div>
@@ -542,13 +458,13 @@
               <h3 data-i18n="contact.cta.title">Pronto para começar sua jornada?</h3>
               <p data-i18n="contact.cta.subtitle">Entre em contato conosco através de qualquer um dos canais acima</p>
               <div class="contact-buttons">
-                <a href="https://wa.me/27665915581" target="_blank" class="btn btn-whatsapp">
+                <a href="https://wa.me/27607835013" target="_blank" class="btn btn-whatsapp">
                   <i class="bi bi-whatsapp"></i> WhatsApp
                 </a>
                 <a href="mailto:izamo@izamo.net" class="btn btn-email">
                   <i class="bi bi-envelope"></i> Email
                 </a>
-                <a href="tel:+27665915581" class="btn btn-phone">
+                <a href="tel:+27607835013" class="btn btn-phone">
                   <i class="bi bi-telephone"></i> Ligar
                 </a>
               </div>
@@ -578,15 +494,14 @@
                 <strong data-i18n="footer.phones">Telefones:</strong><br>
                 +27 66 591 5581 (África do Sul)<br>
                 +27 62 577 4340 (África do Sul)<br>
-                +244 948 974 542 (Angola)<br>
-                +244 950 709 957 (Angola)<br>
+                
                 <strong>Email:</strong> izamo@izamo.net<br>
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                <a href="https://www.youtube.com/izamo_ltd" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
+                <a href="https://www.facebook.com/izamo_ltd" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/izamo_pty" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://wa.me/27607835013" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
               </div>
             </div>
           </div>
@@ -605,13 +520,13 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4 data-i18n="footer.ourtours">Nossos Passeios</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#citytour" data-i18n="footer.citytour">City Tour</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#peninsula" data-i18n="footer.peninsula">Cape Peninsula Tour</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#winery" data-i18n="footer.winery">Winery Tour</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#safari" data-i18n="footer.safari">Safari Aquila</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#extra" data-i18n="footer.extra">Extra Package</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#vip" data-i18n="footer.vip">VIP / Private Tour</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#agulhas" data-i18n="footer.agulhas">Cape Agulhas Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tour-details.html?tour=citytour" data-i18n="footer.citytour">City Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tour-details.html?tour=peninsula" data-i18n="footer.peninsula">Cape Peninsula Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tour-details.html?tour=winery" data-i18n="footer.winery">Winery Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tour-details.html?tour=safari" data-i18n="footer.safari">Safari Aquila</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tour-details.html?tour=extra" data-i18n="footer.extra">Extra Package</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tour-details.html?tour=vip" data-i18n="footer.vip">VIP / Private Tour</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tour-details.html?tour=agulhas" data-i18n="footer.agulhas">Cape Agulhas Tour</a></li>
             </ul>
           </div>
 
@@ -620,13 +535,13 @@
       
 
             <div class="mt-4">
-              <h5 data-i18n="footer.terms.title">Termos e Condições</h5>
-              <a href="assets/termos/termoServiço.pdf" target="_blank" rel="noopener" class="small footer-terms-link" data-i18n="footer.terms.link">Leia nossos termos de serviço</a>
+              <h5 data-i18n="footer.privacy.title">Política de Privacidade</h5>
+              <a href="assets/termos/Política_Privacidade.pdf" target="_blank" rel="noopener" class="small footer-terms-link" data-i18n="footer.privacy.link">Política de Privacidade</a>
             </div>
 
             <div class="mt-3">
-              <h5 data-i18n="footer.partners.title">Parceiros e Colaboradores</h5>
-              <a href="#" class="small" data-i18n="footer.partners.link">Conheça nossa rede de parceiros</a>
+              <h5 data-i18n="footer.terms.title">Termos e Condições</h5>
+              <a href="assets/termos/Terms_Conditions.pdf" target="_blank" rel="noopener" class="small" data-i18n="footer.terms.link">Termos e Condições</a>
             </div>
           </div>
 
@@ -645,7 +560,7 @@
   </footer><!-- End Footer -->
 
   <!-- WhatsApp Button -->
-  <a href="https://wa.me/27665915581" class="whatsapp-btn" target="_blank">
+  <a href="https://wa.me/27607835013" class="whatsapp-btn" target="_blank">
     <i class="bx bxl-whatsapp" style="font-size: 24px;"></i>
   </a>
 
