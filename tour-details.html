@@ -82,7 +82,7 @@
                 <p id="tour-extras" class="mb-0"></p>
               </div>
               <div class="mt-4 d-flex gap-2 flex-wrap">
-                <a id="reserve-btn" href="https://wa.me/27607835013" target="_blank" class="btn btn-gold"><i class="bi bi-whatsapp me-1"></i><span data-i18n="tour.reserve">Book your tour</span></a>
+                <a id="reserve-btn" href="#" target="_blank" class="btn btn-gold"><i class="bi bi-whatsapp me-1"></i><span data-i18n="tour.reserve">Book your tour</span></a>
                 <a href="index.html#services" class="btn btn-outline-gold"><i class="bi bi-arrow-left me-1"></i><span data-i18n="tour.back">Back Home</span></a>
               </div>
             </div>
@@ -286,6 +286,11 @@
 
         document.getElementById('tour-title').textContent = data.title;
         document.getElementById('tour-subtitle').textContent = data.subtitle || '';
+
+        // Configurar link do WhatsApp com mensagem pré-preenchida (em inglês)
+        const whatsappMessage = encodeURIComponent(`Hello! I would like to book the tour: ${data.title}${data.subtitle ? ' - ' + data.subtitle : ''}. Could you please assist me with more details?`);
+        const whatsappLink = `https://wa.me/27607835013?text=${whatsappMessage}`;
+        document.getElementById('reserve-btn').href = whatsappLink;
 
         const stopsUl = document.getElementById('tour-stops');
         stopsUl.innerHTML = '';
